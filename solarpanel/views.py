@@ -53,8 +53,8 @@ def addcustomers(request):
         )
         return redirect('loggedin')
     else:
-
         return render(request, 'examples/addCustomers.html')
+
 
 
 @csrf_exempt
