@@ -22,6 +22,14 @@
                     </div>
                     <div class="card-body ">
                         <div class="row">
+                            <label class="col-sm-2 col-form-label">Customer Name</label>
+                            <select name="customer_id">
+                                {% for customer in customers %}
+                                    <option value="{{ customer.id }}">{{ customer.customer_name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="row">
                             <p style="color: red;">{{LoginError}}</p>
                             <p style="color: red;">{{myform}}</p>
                             <label class="col-sm-2 col-form-label">Usage in Kwh</label>
@@ -35,7 +43,7 @@
                         </div>
 
                         <div class="row">
-                            <label class="col-sm-2 col-form-label">Previous Total Cost (in $)</label>
+                            <label class="col-sm-2 col-form-label">Previous Total Cost ($)</label>
                             <div class="col-sm-7">
                                 <div class="form-group">
                                     <input class="form-control" type="number" name="previous_total_cost"

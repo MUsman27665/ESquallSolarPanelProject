@@ -22,5 +22,9 @@ urlpatterns = [
     path('loggedin/', loggedin, name='loggedin'),
     path('addcustomers/', addcustomers, name='addCustomers'),
     path('customerdetails', customerdetails, name='customerdetails'),
-    path('customers', customerList, name='customersList')
+    path('showadvantages/<int:customerid>/', showadvantages, name='showadvantages'),
+    path('customers', customerList, name='customersList'),
+    path('allcustomers', customersadmin, name='allcustomers'),
+    path('agents', agents, name='agents'),
+    path('quotations', qoutations, name='quotations')
 ]

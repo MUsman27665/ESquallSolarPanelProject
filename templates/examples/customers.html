@@ -21,10 +21,11 @@
                 <table id="bootstrap-table" class="table">
                     <thead>
 
-                        <th data-field="id" class="text-center">Name</th>
-                        <th data-field="firstname" data-sortable="true">Address</th>
-                        <th data-field="email" data-sortable="true">Phone Number</th>
-                        <th data-field="date" data-sortable="true">Zipcode</th>
+                        <th data-field="name" class="text-center">Name</th>
+                        <th data-field="address" data-sortable="true">Address</th>
+                        <th data-field="phonenumber" data-sortable="true">Phone Number</th>
+                        <th data-field="zipcode" data-sortable="true">Zipcode</th>
+                        <th data-field="status" data-sortable="true">Status</th>
                     </thead>
                     <tbody>
                         {% for user in users %}
@@ -33,6 +34,7 @@
                                 <td> {{ user.customer_address }} </td>
                                 <td> {{ user.customer_phonenumber }} </td>
                                 <td> {{ user.customer_Zipcode }} </td>
+                                <td> {{ user.customer_response }} </td>
                             </tr>
                         {% endfor %}
                     </tbody>
